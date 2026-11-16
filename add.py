@@ -5,6 +5,6 @@ from polret import HolirScreen
 app = QApplication([])
 
 
-foter = HolirScreen
+foter = HolirScreen()
 
 app.exec()
