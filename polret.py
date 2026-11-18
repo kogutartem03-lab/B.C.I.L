@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import (
     QLineEdit
 )
 from PyQt5.QtCore import Qt
-
+from lokp import KolirScreen
 
 
 class HolirScreen(QWidget):
@@ -17,7 +17,7 @@ class HolirScreen(QWidget):
 
         self.set_appear()
         self.initUI()
-        #self.connects()
+        self.connects()
         self.show()
         
     def set_appear(self):
@@ -25,7 +25,7 @@ class HolirScreen(QWidget):
         self.setWindowTitle("Початок")
         
     def initUI(self):
-        self.text_1 = QLabel("Ласково просимо у програмі Безпека Захисту Індівідуальних Данів і Логічне розвязання")
+        self.text_1 = QLabel("Ласково просимо у програмі Безпека Захисту Індівідуальних Данів і Логічне розвязання. Ця програма пивина вам допомогти до знаходень роботи і до фаілів.")
         
         
         self.lb_login = QLabel("Веди свій І.П.Д.")
@@ -60,5 +60,12 @@ class HolirScreen(QWidget):
         
         
         
-    def click():
-        pass      
+    def connects(self):
+        self.btn_start.clicked.connect(self.nex_click)
+
+ 
+    def nex_click(self):
+        name = self.le_name.text()
+        self.hide()
+        self.lokp_screen = KolirScreen(name)
+        self.lokp_screen.show()    
