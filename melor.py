@@ -1,0 +1,11 @@
+TEXT_NERTY_1 = "HELOW"
+
+
+
+TEXT_NERTY_2 = "KOL"
+
+
+TEXT_NERTY_3 = "MOP"
+
+
+TEXT_NERTY_4 = "NOT"

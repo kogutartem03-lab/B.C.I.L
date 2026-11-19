@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import (
     QLineEdit
 )
 from PyQt5.QtCore import Qt
-
+from holp import MoilScreen
 
 
 class KolirScreen(QWidget):
@@ -18,7 +18,7 @@ class KolirScreen(QWidget):
         self.name = name
         self.set_appear()
         self.initUI()
-        #self.connects()
+        self.connects()
         self.show()
         
     def set_appear(self):
@@ -57,10 +57,17 @@ class KolirScreen(QWidget):
         
         
         
-    #def connects(self):
-        #self.btn_start.clicked.connect(self.nex_click)
+    def connects(self):
+        self.btn_start.clicked.connect(self.nex_click)
 
 
-    #def nex_click(self):
-        #self.hide()
-        #self.wert_screen = Screen()   
+    def nex_click(self):
+        name = self.le_name.text()
+        self.hide()
+        self.holp_screen = MoilScreen(name)   
+        self.holp_screen.show()
+        
+   
+            
+        
+            
