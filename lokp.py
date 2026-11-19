@@ -26,21 +26,22 @@ class KolirScreen(QWidget):
         self.setWindowTitle("Початок")
         
     def initUI(self):
-        self.text_2 = QLabel("вітаємо вас у нрограмі")
+        self.text_2 = QLabel("Вітаю тепер ви будете ДДЕдрууунндру*** і все що побажаєте.")
         self.text_3 = QLabel(self.name)
         
-        self.lb_login = QLabel("Веди свій І.П.Д.")
+        self.lb_login = QLabel("тото хто був увас подисись нате що відіслав вам там і беде відповіть ")
         self.le_name = QLineEdit()
-        self.le_name.setPlaceholderText("І.П.Д.")
+        self.le_name.setPlaceholderText("я.не хотів я немав це наувазі")
         self.le_name.setFixedSize(250, 35)
         self.le_name.setStyleSheet("font-size: 14px;")
-        self.btn_start = QPushButton("Почати!")
+        self.btn_start = QPushButton("Подивись")
         
         self.main_layout = QVBoxLayout()
         self.center_layout = QVBoxLayout()
         self.center_layout.addWidget(self.text_2, alignment=Qt.AlignmentFlag.AlignCenter)
         self.center_layout.addWidget(self.text_3, alignment=Qt.AlignmentFlag.AlignCenter) 
         self.center_layout.addStretch(30)
+        self.center_layout.addWidget(self.lb_login, alignment=Qt.AlignmentFlag.AlignCenter)
         self.center_layout.addWidget(self.le_name, alignment=Qt.AlignmentFlag.AlignCenter)
         self.center_layout.addWidget(self.btn_start, alignment=Qt.AlignmentFlag.AlignCenter)
         self.main_layout.addStretch()
@@ -67,7 +68,4 @@ class KolirScreen(QWidget):
         self.holp_screen = MoilScreen(name)   
         self.holp_screen.show()
         
-   
-            
-        
-            
+    

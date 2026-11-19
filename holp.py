@@ -20,6 +20,7 @@ class MoilScreen(QWidget):
         self.set_appear()
         self.initUI()
         #self.connects()
+        self.btn_start.clicked.connect(self.check_text)
         self.show()
         
     def set_appear(self):
@@ -27,10 +28,10 @@ class MoilScreen(QWidget):
         self.setWindowTitle("Початок")
         
     def initUI(self):
-        self.text_4 = QLabel("вітаємо вас у нрограмі")
+        self.text_4 = QLabel("місце де спогади")
         self.text_5 = QLabel()
                         
-        self.btn_start = QPushButton("Почати!")
+        self.btn_start = QPushButton("кінец?")
         self.main_layout = QVBoxLayout()
         self.center_layout = QVBoxLayout()
         
@@ -44,7 +45,7 @@ class MoilScreen(QWidget):
           
     def check_text(self):
         user_input = self.name
-        if user_input == "B.C.I.L":
+        if user_input == "Word lend":
             self.text_5.setText(TEXT_NERTY_1)
         elif user_input == "197 - A":
             self.text_5.setText(TEXT_NERTY_2)
@@ -55,6 +56,6 @@ class MoilScreen(QWidget):
         else:
             self.text_5.setText("Перепрошуємо ваш запрос може бути не дійсним чи неправдивим будласка перевірте те що ви написали")
         
-        self.btn_start.clicked.connect(self.check_text)                        
+                               
         
     
